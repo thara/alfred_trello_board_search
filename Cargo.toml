@@ -1,0 +1,12 @@
+[package]
+name = "trello_board_search"
+version = "0.1.0"
+authors = ["Tomochika Hara <rust@thara.dev>"]
+edition = "2018"
+
+[dependencies]
+reqwest = "0.9.17"
+structopt = "0.2"
+serde = "1.0.92"
+serde_derive = "1.0.92"
+serde_json = "1.0.39"
