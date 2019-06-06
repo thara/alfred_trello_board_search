@@ -21,8 +21,13 @@ struct TrelloBoard {
     #[serde(rename = "shortUrl")]
     short_url: String,
     starred: bool,
-    #[serde(rename = "dateLastView")]
+
+    #[serde(rename = "dateLastView", default = "default_date_last_view")]
     date_last_view: String,
+}
+
+fn default_date_last_view() -> String {
+    "9999-99-99T23:59:59.999Z".to_string()  // for sorting
 }
 
 #[derive(Serialize, Debug)]
